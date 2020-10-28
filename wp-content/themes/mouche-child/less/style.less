@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Arial Rounded';
+    src: url(../fonts/arial.ttf);
+    font-weight: normal;
+		font-display: swap;
+}
+
+@font-face {
+    font-family: 'Burbank';
+    src: url(../fonts/burbank.ttf);
+    font-weight: normal;
+		font-display: swap;
+}
+
+.ornament-image-wrapper {
+		transition: transform 500ms ease;
+	  transform-style: preserve-3d;
+	  position: relative;
+
+		.front, .back {
+			backface-visibility: hidden;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+		}
+
+		.front {
+    	z-index: 2;
+    	transform: rotateY(0deg);
+		}
+
+		.back {
+		   transform: rotateY(180deg);
+		}
+
+}
+
+.flipper-container {
+	position: relative;
+	z-index: 2;
+
+
+	& {
+		.ornament-image-wrapper, .front, .back  {
+			height: 15.5vw;
+			width: 14.5vw;
+		}
+	}
+
+	&:hover {
+		.ornament-image-wrapper {
+			transform: rotateY(180deg) scale(1.3);
+		}
+	}
+}
+
+h1 {
+	color: @color-dark;
+}
+
+// Add your styles above this line
+@import './responsive.less';

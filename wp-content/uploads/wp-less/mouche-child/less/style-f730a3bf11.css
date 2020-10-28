@@ -1,0 +1,89 @@
+.ornament-image-wrapper {
+  transition: transform 500ms ease;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.ornament-image-wrapper .front,
+.ornament-image-wrapper .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ornament-image-wrapper .front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+.ornament-image-wrapper .back {
+  transform: rotateY(180deg);
+}
+.flipper-container {
+  position: relative;
+  z-index: 2;
+}
+.flipper-container .ornament-image-wrapper,
+.flipper-container .front,
+.flipper-container .back {
+  height: 15.5vw;
+  width: 14.5vw;
+}
+.flipper-container:hover .ornament-image-wrapper {
+  transform: rotateY(180deg) scale(1.3);
+}
+@media (min-width: 481px) and (max-width: 1024px) {
+  .row.gutter-45.align-items-center.flex-nowrap.mob-md-block.margin-responsive {
+    margin-bottom: -15px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1024px) {
+  #blog-header:after,
+  #home-header:after {
+    width: 89%;
+  }
+}
+@media (max-width: 991px) {
+  .home-featured-article {
+    min-height: 530px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .accordion-item.active + .accordion-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #home-header {
+    background-image: url(http://localhost/varietyclub/wp-content/themes/mouche-child/less/../images/home-hero-background-tablet.jpg);
+  }
+  h1 {
+    line-height: 45px !important;
+  }
+}
+@media (max-width: 650px) {
+  .blog-archive-post-item:not(:last-child) > .flex-36 {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 480px) {
+  blockquote {
+    padding-left: 20px;
+  }
+  blockquote strong {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  #share-icons {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center;
+  }
+  #share-icons > a {
+    margin-bottom: 0;
+  }
+  #share-icons > a:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+.mobile-menu .menu-menu-1-container {
+  margin-top: 160px;
+}

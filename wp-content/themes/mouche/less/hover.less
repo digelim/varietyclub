@@ -1,0 +1,112 @@
+[class^="btn"],
+[class*=" btn"],
+input[type="submit"],
+button[type="submit"] {
+  &[class*="primary"],
+  &[class^="primary"] {
+    &:hover {
+      background-color: @button-primary-hover;
+      .text-contrast(@button-primary-hover);
+    }
+  }
+
+  &[class*="secondary"],
+  &[class^="secondary"] {
+    &:hover {
+      background-color: @button-secondary-hover;
+      .text-contrast(@button-secondary-hover);
+    }
+  }
+
+  &[class*="tertiary"],
+  &[class^="tertiary"] {
+    &:hover {
+      background-color: @button-tertiary-hover;
+      .text-contrast(@button-tertiary-hover);
+    }
+  }
+
+  &[class*="white"],
+  &[class^="white"] {
+    &:hover{
+      background-color: darken(white, 10%);
+    }
+  }
+
+  &[class*="ghost-black"],
+  &[class^="ghost-black"] {
+    &:hover{
+      background: @color-primary;
+      .text-contrast(@color-primary);
+      box-shadow: @shadow;
+      border: 2px solid @color-primary;
+    }
+
+    &[class*="transparent"],
+    &[class^="transparent"] {
+      &:hover{
+        background: @color-primary;
+        .text-contrast(@color-primary);
+        box-shadow: @shadow;
+        border: 1px solid @color-primary;
+      }
+    }
+  }
+
+  &[class*="ghost-white"],
+  &[class^="ghost-white"] {
+    &:hover{
+      background: white;
+      color: black;
+      box-shadow: @shadow;
+    }
+
+    &[class*="transparent"],
+    &[class^="transparent"] {
+      &:hover{
+        background: @color-primary;
+        .text-contrast(@color-primary);
+        box-shadow: @shadow;
+        border: 1px solid @color-primary;
+      }
+    }
+  }
+}
+
+a {
+  &:not([class*="text-"]):not([class*="color-"]):not(.btn):not(.tab) {
+    &:hover, &:active {
+      color: @default-link-hover;
+    }
+  }
+
+  &.color-white, &.text-white {
+    &:hover, &:active {
+      color: @light-link-hover !important;
+    }
+  }
+
+  &.color-black, &.text-black {
+    &:hover, &:active {
+      color: @color-primary !important;
+    }
+  }
+
+  &.color-dark {
+    &:hover, &:active {
+      color: @color-primary !important;
+    }
+  }
+}
+
+@media @menu-max {
+  .navigation-list {
+    .menu-item {
+      a {
+        &:hover, &:active {
+          color: @color-secondary;
+        }
+      }
+    }
+  }
+}

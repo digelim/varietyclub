@@ -1,0 +1,127 @@
+@import './utils.less';
+
+[class^="btn"],
+[class*=" btn"],
+input[type="submit"],
+button[type="submit"] {
+  .type-bold();
+  line-height: 1;
+  position: relative;
+  text-align: center;
+  text-decoration: none !important;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+
+  .icon-arrow_right_alt {
+    transition: all 200ms ease;
+    left: 0;
+    position: relative;
+    font-size: 26px;
+    height: 16px;
+    top: -5px;
+  }
+
+  &:hover {
+    .icon-arrow_right_alt {
+      left: 10px;
+    }
+  }
+
+  &[class*="round"],
+  &[class^="round"] {
+    border-radius: 1000px;
+  }
+
+  &[class*="primary"],
+  &[class^="primary"] {
+    background-color: @color-primary;
+    .text-contrast(@color-primary);
+    box-shadow: @shadow;
+  }
+
+  &[class*="secondary"],
+  &[class^="secondary"] {
+    .text-contrast(@color-secondary);
+    background-color: @color-secondary;
+    box-shadow: @shadow;
+  }
+
+  &[class*="tertiary"],
+  &[class^="tertiary"] {
+    .text-contrast(@color-tertiary);
+    background-color: @color-tertiary;
+    box-shadow: @shadow;
+  }
+
+  &[class*="white"],
+  &[class^="white"] {
+    color: @color-dark;
+    background-color: white;
+    box-shadow: @shadow;
+  }
+
+  &[class*="ghost-black"],
+  &[class^="ghost-black"] {
+    border: 1px solid @color-dark;
+    color: white;
+    background: transparent;
+
+    &[class*="transparent"],
+    &[class^="transparent"] {
+      border: 1px solid #E8E8E8;
+    }
+  }
+
+  &[class*="ghost-white"],
+  &[class^="ghost-white"] {
+    border: 1px solid white;
+    color: white;
+    background: transparent;
+
+    &[class*="transparent"],
+    &[class^="transparent"] {
+      border: 1px solid #E8E8E8;
+    }
+  }
+
+  &[class*="small"],
+  &[class^="small"] {
+    padding: ~"@{small-button-vertical-padding}px" ~"@{small-button-horizontal-padding}px" !important;
+    font-size: ~"@{small-button-font-size}px";
+  }
+
+  &[class*="medium"],
+  &[class^="medium"] {
+    padding: ~"@{medium-button-vertical-padding}px" ~"@{medium-button-horizontal-padding}px" !important;
+    font-size: ~"@{medium-button-font-size}px";
+  }
+
+  &[class*="large"],
+  &[class^="large"] {
+    padding: ~"@{large-button-vertical-padding}px" ~"@{large-button-horizontal-padding}px" !important;
+    font-size: ~"@{large-button-font-size}px";
+  }
+
+  &[disabled] {
+    background: rgba(0, 0, 0, 0.05) !important;
+    color: #979797 !important;
+    pointer-events: none;
+  }
+}
+
+.btns-group {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  [class*="btn"],
+  [class^="btn"] {
+    flex: inherit;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}

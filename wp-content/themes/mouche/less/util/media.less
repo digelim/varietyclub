@@ -1,0 +1,22 @@
+@mobile-small: ~"(max-width: 320px)";
+
+@mobile-medium: ~"(max-width: 480px)";
+
+@mobile-large: ~"(max-width: 650px)";
+
+@tablet-small: ~"(max-width: 768px)";
+
+@tablet-medium: ~"(max-width: 991px)";
+
+@tablet-large: ~"(max-width: 1024px)";
+
+@desktop-small: ~"(max-width: 1200px)";
+
+@desktop-medium: ~"(max-width: 1440px)";
+
+@desktop-large: ~"(min-width: 1920px)";
+
+@menu-above: (@menu-breakpoint + 1);
+
+@menu-max: ~"(max-width: @{menu-breakpoint}px)";
+@menu-min: ~"(min-width: @{menu-above}px)";

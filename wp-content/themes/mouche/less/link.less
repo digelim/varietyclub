@@ -1,0 +1,23 @@
+@import './utils.less';
+
+a {
+  transition: all 200ms ease-in;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:not([class*="text-"]):not([class*="color-"]):not(.btn):not(.tab) {
+    color: @color-links;
+  }
+
+  &.color-white, &.text-white {
+    color: @color-links-light;
+  }
+
+  &.color-black, &.text-black {
+    color: black;
+  }
+
+  &:focus {
+    outline:none;
+  }
+}

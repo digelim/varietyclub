@@ -1,0 +1,307 @@
+@import "../utils.less";
+
+body {
+  font-family: @text-font-family;
+  color: @color-dark;
+  .type-regular;
+  line-height: 1.65;
+  font-size: ~"@{body-font-size}px";
+}
+
+.type-light {
+  font-weight: 300 !important;
+}
+
+.type-regular {
+  font-weight: 400 !important;
+}
+
+.type-medium {
+  font-weight: 600 !important;
+}
+
+.type-bold {
+  font-weight: 700 !important;
+}
+
+.type-extra {
+  font-weight: 800 !important;
+}
+
+.type-black {
+  font-weight: 900 !important;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.no-caps {
+  text-transform: initial !important;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+// Default type layout
+h1, h2, h3, h4, h5, h6 {
+
+  &:not([class*=type-]) {
+    font-weight: 600;
+  }
+
+  font-family: @heading-font-family, serif;
+}
+
+h1 {
+  line-height: 1.218;
+
+  &[class^="small"],
+  &[class*=" small"] {
+    font-size: ~"@{heading-size-small}px";
+  }
+
+  &[class^="medium"],
+  &[class*=" medium"] {
+    font-size: ~"@{heading-size-medium}px";
+    line-height: 40px;
+  }
+
+  &[class^="large"],
+  &[class*=" large"] {
+    font-size: ~"@{heading-size-large}px";
+    line-height: 68px;
+  }
+}
+
+h2 {
+  &[class^="small"],
+  &[class*=" small"] {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  &[class^="medium"],
+  &[class*=" medium"] {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  &[class^="large"],
+  &[class*=" large"] {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+h3 {
+  &[class^="small"],
+  &[class*=" small"] {
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  &[class^="medium"],
+  &[class*=" medium"] {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  &[class^="large"],
+  &[class*=" large"] {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+h4 {
+  font-size: 22px;
+  line-height: 1.63;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 1.63;
+}
+
+h6 {
+  font-size: 18px;
+  line-height: 1.63;
+}
+
+p {
+  line-height: 1.63;
+
+  &[class^="large"],
+  &[class*=" large"] {
+    font-size: @text-large;
+  }
+
+  &[class^="medium"],
+  &[class*=" medium"] {
+    font-size: @text-medium;
+  }
+
+  &[class^="small"],
+  &[class*=" small"] {
+    font-size: @text-small;
+  }
+}
+
+b {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+.subtitle, a.subtitle {
+  &:not(.text-white):not([class*="color-"]):not(:hover) {
+    color: @color-dark-grey !important;
+  }
+
+  &.text-white {
+    color: @color-light-grey !important;
+  }
+
+  .text-dark {
+    color: @color-dark !important;
+  }
+
+  .text-black {
+    color: black !important;
+  }
+
+  .text-white {
+    color: white !important;
+  }
+}
+
+a {
+  &:not(.text-white):not([class*="color-"]) {
+    .subtitle {
+      color: @color-dark-grey !important;
+    }
+  }
+
+  &.text-white.subtitle {
+    color: @color-light-grey;
+  }
+}
+
+.caption {
+  font-size: 12px;
+  line-height: 1;
+  color: lighten(black, 30%);
+}
+
+.overline {
+  .caps;
+  font-size: 12px;
+  line-height: 1;
+  color: @color-dark;
+}
+
+// text color
+.color-primary {
+  color: @color-primary;
+}
+
+.color-secondary {
+  color: @color-secondary;
+}
+
+.color-tertiary {
+  color: @color-tertiary !important;
+}
+
+.border-color {
+  color: @border-color;
+}
+
+.color-dark {
+  color: @color-dark;
+}
+
+.color-black {
+    color: black;
+}
+
+// text alignment
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.text-black, a.text-black, .text-black a {
+  color: @color-dark !important;
+}
+
+.generate-font-size(@n, @i: 1) when (@i =< @n) {
+  .font-@{i} {
+    font-size: ~"@{i}px";
+  }
+
+  .generate-font-size(@n, (@i + 1));
+}
+
+.generate-font-size(50);
+
+.generate-line-height(@n, @i: 15) when (@i =< @n) {
+  .l-h-@{i} {
+    line-height: ~"@{i}px" !important;
+  }
+
+  .generate-line-height(@n, (@i + 1));
+}
+
+.generate-line-height(100);
+
+.letter-spacing {
+  letter-spacing: 0.5px;
+}
+
+a.subtitle {
+  &:hover, &:active {
+    i, & {
+      color: @color-primary !important;
+    }
+  }
+}
+
+.font-20 {
+  line-height: 25px;
+}
+
+.font-18 {
+  line-height: 27px;
+}
+
+.font-15 {
+  line-height: 20px;
+}
+
+.font-14 {
+  line-height: 23px;
+}
+
+.font-12 {
+  line-height: 15px;
+}
+
+h1 {
+  color: @color-tertiary;
+}
