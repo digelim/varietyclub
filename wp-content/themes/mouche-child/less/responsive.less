@@ -1,77 +1,60 @@
-@media (min-width: 481px) and (max-width: 1024px) {
-  .row.gutter-45.align-items-center.flex-nowrap.mob-md-block.margin-responsive {
-    margin-bottom: -15px;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1024px) {
-  #blog-header, #home-header {
-    &:after {
-      width: 89%;
-    }
-  }
-}
-
-@media (max-width: 991px) {
-  .home-featured-article {
-    min-height: 530px;
-    margin-top: 30px;
-  }
-}
-
 @media (max-width: 768px) {
-  .accordion-item.active + .accordion-content {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  #home-header {
-    background-image: url(../images/home-hero-background-tablet.jpg);
-  }
-
-  h1 {
-    line-height: 45px !important;
-  }
-}
-
-@media (max-width: 650px) {
-  .blog-archive-post-item {
-    &:not(:last-child) {
-      > .flex-36 {
-        margin-bottom: 20px;
-      }
+  .foreign-object-wrapper {
+    p {
+      height: 50px;
     }
+  }
+
+  .foreign-object-wrapper-2 {
+
+    p {
+      font-size: 11px !important;
+      margin-top: 60px !important;
+      position: relative;
+      width: 150px !important;
+    }
+  }
+
+  .flipper-container {
+  	&:hover, &.hover {
+  		.ornament-image-wrapper {
+  			transform: rotateY(180deg) scale(1.9);
+  		}
+  	}
   }
 }
 
 @media (max-width: 480px) {
-  blockquote {
-    padding-left: 20px;
+  [class*="navigation_"] {
+    padding-top: 15px;
+    padding-bottom: 15px;
 
-    strong {
-      font-size: 20px;
-      line-height: 25px;
+    .navigation-extra-elements {
+      margin-right: 10px;
+    }
+
+    .menu-wrapper {
+      display: block !important;
+    }
+
+    [class^="btn"][class*="small"], [class*=" btn"][class*="small"], input[type="submit"][class*="small"], button[type="submit"][class*="small"], [class^="btn"][class^="small"], [class*=" btn"][class^="small"], input[type="submit"][class^="small"], button[type="submit"][class^="small"] {
+      padding: 12px 17px !important;
+    }
+
+    .logo img {
+        max-height: 40px;
     }
   }
 
-  #share-icons {
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: center;
-
-    > a {
-      margin-bottom: 0;
-
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
-    }
+  .flipper-container:after {
+      top: -50px !important;
+      height: 80px !important;
   }
 }
 
-
-.mobile-menu {
-  .menu-menu-1-container {
-    margin-top: 160px;
+@media (max-width: 320px) {
+  #header img {
+    object-fit: cover;
+    height: 202px;
   }
 }
