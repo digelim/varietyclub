@@ -43,7 +43,8 @@ $(document).ready(function(){
   });
 
   $('body').on('click', '.ornament-image-wrapper',function() {
-    $(this).parent().toggleClass('hover');
+    $('.flipper-container').removeClass('hover');
+    $(this).parent().addClass('hover');
   });
 
   $('.search-trigger').on('click', function() {
@@ -75,6 +76,6 @@ $(document).ready(function(){
   $('#close-mobile-search').on('click', function(e) {
       e.preventDefault();
 
-      $('#search-mobile').removeClass('active');      
+      $('#search-mobile').removeClass('active');
   })
 });
