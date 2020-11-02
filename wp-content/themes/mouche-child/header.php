@@ -24,7 +24,7 @@
 	?>
 
 	<nav class="navigation_4 full-width">
-		<div class="container">
+		<div class="container width-1200">
 			<div class="main-menu row justify-content-between align-items-center">
 				<div class="col-auto logo-column">
 					<a class="logo" href="<?php echo home_url(); ?>">
