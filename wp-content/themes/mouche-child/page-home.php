@@ -22,7 +22,7 @@ get_header();
           <path d="m14.928 16-4.4-4.4a6.437 6.437 0 0 1 -4.028 1.4 6.5 6.5 0 1 1 6.5-6.5 6.436 6.436 0 0 1 -1.4 4.029l4.4 4.4-1.071 1.071zm-8.413-14.484a5 5 0 1 0 5 5 5.005 5.005 0 0 0 -5-5z" fill="#707070"/>
         </svg>
       </div>
-      <div class="input-icon-right width-350 margin-auto hide mob-md-show" id="search-mobile">
+      <div class="input-icon-right margin-auto hide mob-md-show" id="search-mobile">
         <input class="full-width search" type="text" name="search" placeholder="Search ornaments by phone number">
         <svg class="search-trigger" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
           <path d="m14.928 16-4.4-4.4a6.437 6.437 0 0 1 -4.028 1.4 6.5 6.5 0 1 1 6.5-6.5 6.436 6.436 0 0 1 -1.4 4.029l4.4 4.4-1.071 1.071zm-8.413-14.484a5 5 0 1 0 5 5 5.005 5.005 0 0 0 -5-5z" fill="#707070"/>
