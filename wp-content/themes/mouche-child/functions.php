@@ -125,8 +125,6 @@ function custom_search() {
         $j++;
         $i++;
     }
-  } else {
-    $output = 'false';
   }
 
   echo $output;
