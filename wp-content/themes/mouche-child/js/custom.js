@@ -19,7 +19,7 @@ function search(isSearching, paged) {
 
     $.post(MyAjax.ajaxurl, data, function(res) {
       if (res == 'false') {
-        $('#results').html('<p style="font-family: \'Arial\';" class="align-center font-14 l-h-27">No ornaments found.</p>');
+        $('#results').html('<div class="container"><p style="font-family: \'Arial\';" class="align-center font-14 l-h-27">No ornaments found.</p></div>');
       } else {
         $('#results').append(res);
       }
