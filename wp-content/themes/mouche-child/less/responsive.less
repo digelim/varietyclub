@@ -26,8 +26,9 @@
 
 @media (max-width: 480px) {
   [class*="navigation_"] {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    z-index: 1000;
 
     .navigation-extra-elements {
       margin-right: 10px;
@@ -49,6 +50,66 @@
   .flipper-container:after {
       top: -50px !important;
       height: 80px !important;
+  }
+
+  input[type="text"] {
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+
+  #search-mobile {
+    position: fixed !important;
+    top: 70px;
+    background: white;
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: block !important;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.16);
+
+    .search-trigger {
+      left: 15px;
+    }
+
+    input.search {
+      border: none !important;
+      padding-left: 29px !important;
+      padding-right: 30px !important;
+    }
+  }
+}
+
+#search-mobile svg {
+  cursor: pointer;
+
+  path {
+    fill: #304659;
+  }
+
+  &:hover {
+    g path {
+      stroke: @color-primary;
+    }
+
+    path {
+        fill: @color-primary;
+    }
+  }
+}
+
+#search-mobile {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 500ms ease;
+
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 

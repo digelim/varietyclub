@@ -13,7 +13,7 @@ if ( $footer_theme == 'dark' ) {
 ?>
 
 <footer class="footer_7">
-  <div class="container-fluid margin-auto align-center p-t-15 p-b-15 font-16 l-h-24 <?php echo $footer_theme === 'dark' ? 'text-white' : ''; ?>">
+  <div class="container-fluid margin-auto align-center p-t-15 p-b-15 font-16 l-h-24 mob-md-font-14 <?php echo $footer_theme === 'dark' ? 'text-white' : ''; ?>">
     © <?php echo Date('Y'); ?> Copyright. All Rights Reserved.
   </div>
 </footer>

@@ -127,7 +127,7 @@
 
 				  </div>
 				</div>
-				<a href="#" class="open-mobile-menu m-l-10">
+				<a href="#" class="m-l-10" id="mobile-open-search">
 					<svg height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="m0 0h20v20h-20z" fill="none"/><circle cx="8.5" cy="8.5" fill="none" r="5.5"/><path d="m14.928 16-4.4-4.4a6.433 6.433 0 0 1 -4.028 1.4 6.5 6.5 0 1 1 6.5-6.5 6.432 6.432 0 0 1 -1.4 4.029l4.4 4.4-1.071 1.071zm-8.413-14.484a5 5 0 1 0 5 5 5.005 5.005 0 0 0 -5-5z" fill="#304659" transform="translate(2 2)"/></svg>
 				</a>
 			</div>

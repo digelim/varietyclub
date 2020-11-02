@@ -113,7 +113,7 @@ function custom_search() {
 
         if ( $show_new_brench ) {
 
-          $output .= '<div class="col-md-6 m-b-50">' .
+          $output .= '<div class="col-md-6 m-b-50 mob-md-m-b-80">' .
             '<img class="block full-width" style="position: relative; z-index: 3; transform: ' . $rotate . '" src="' . get_bloginfo('stylesheet_directory') . '/images/branches-'. $branch . '-desktop.png" alt="Image">' .
             '<div class="row justify-content-around" style="width: 90%">' . $ornaments .
             '</div>' .

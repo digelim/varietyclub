@@ -6722,29 +6722,29 @@ textarea[class*=" full-width"],
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,
 .wc-stripe-elements-field::-webkit-input-placeholder {
-  color: #939699;
+  color: #787878;
 }
 input:-ms-input-placeholder ::-webkit-input-placeholder,
 textarea:-ms-input-placeholder ::-webkit-input-placeholder,
 .wc-stripe-elements-field:-ms-input-placeholder ::-webkit-input-placeholder {
   /* Edge */
-  color: #939699;
+  color: #787878;
 }
 input:-ms-input-placeholder :-ms-input-placeholder,
 textarea:-ms-input-placeholder :-ms-input-placeholder,
 .wc-stripe-elements-field:-ms-input-placeholder :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #939699;
+  color: #787878;
 }
 input:-ms-input-placeholder ::placeholder,
 textarea:-ms-input-placeholder ::placeholder,
 .wc-stripe-elements-field:-ms-input-placeholder ::placeholder {
-  color: #939699;
+  color: #787878;
 }
 input::placeholder,
 textarea::placeholder,
 .wc-stripe-elements-field::placeholder {
-  color: #939699;
+  color: #787878;
 }
 textarea {
   resize: none;

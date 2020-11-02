@@ -1,7 +1,7 @@
 $ = jQuery;
 
 function search(isSearching, paged) {
-    var existingString = $('input[name="search"]').val();
+    var existingString = $('input.search').val();
 
     if (isSearching === false) {
       return;
@@ -24,7 +24,9 @@ $(document).ready(function(){
   window.paged = 2;
   search(true, 1);
 
-  $('input[name="search"]').on('keypress', function(e) {
+  $('input.search').on('keyup', function(e) {
+    $('input.search').val($(this).val());
+
     if (e.keyCode == 13) {
       window.scrollTo(0,0);
       $('#results').html('');
@@ -44,7 +46,7 @@ $(document).ready(function(){
     $(this).parent().toggleClass('hover');
   });
 
-  $('#search-trigger').on('click', function() {
+  $('.search-trigger').on('click', function() {
     $('#results').html('');
     window.scrollTo(0,0);
     search(true, 1);
@@ -63,4 +65,16 @@ $(document).ready(function(){
       }
     }
   });
+
+  $('#mobile-open-search').on('click', function(e) {
+    e.preventDefault();
+
+    $('#search-mobile').addClass('active');
+  });
+
+  $('#close-mobile-search').on('click', function(e) {
+      e.preventDefault();
+
+      $('#search-mobile').removeClass('active');      
+  })
 });
