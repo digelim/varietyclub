@@ -2,7 +2,7 @@ $ = jQuery;
 
 function search(isSearching, paged) {
     $('#search-mobile').removeClass('active');
-    
+
     var existingString = $('input.search').val();
 
     if (isSearching === false) {
@@ -18,7 +18,11 @@ function search(isSearching, paged) {
     };
 
     $.post(MyAjax.ajaxurl, data, function(res) {
-      $('#results').append(res);
+      if (res == 'false') {
+        $('#results').html('<p style="font-family: \'Arial\';" class="align-center font-14 l-h-27">No ornaments found.</p>');
+      } else {
+        $('#results').append(res);
+      }
     });
 }
 
