@@ -1,6 +1,8 @@
 $ = jQuery;
 
 function search(isSearching, paged) {
+    $('#search-mobile').removeClass('active');
+    
     var existingString = $('input.search').val();
 
     if (isSearching === false) {
