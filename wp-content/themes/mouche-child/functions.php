@@ -53,7 +53,7 @@ function custom_search() {
         $the_query->the_post();
 
         $branch = rand( 1, 2 );
-        $rotate = $i % 4 === 0 || $the_query->found_posts - ((($paged - 1) * 4 )+ $j) === 1 ? 'rotate(180deg)' : 'rotate(0)';
+        $rotate = $i % 4 === 0 || ($j % 2 === 0 && $the_query->found_posts - ((($paged - 1) * 4 )+ $j) === 0) ? 'rotate(180deg)' : 'rotate(0)';
 
         $show_new_brench = $j % 2 === 0 || $the_query->found_posts - ((($paged - 1) * 4 )+ $j) === 0 ? true : false;
 
