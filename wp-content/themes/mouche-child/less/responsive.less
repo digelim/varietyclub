@@ -28,7 +28,6 @@
   [class*="navigation_"] {
     padding-top: 11px;
     padding-bottom: 11px;
-    z-index: 1000;
 
     .navigation-extra-elements {
       margin-right: 10px;
@@ -59,6 +58,10 @@
 }
 
 @media (max-width: 850px) {
+  [class*="navigation_"] {
+    z-index: 1000;
+  }
+  
   #mobile-open-search {
     display: block;
   }
@@ -91,7 +94,7 @@
   }
 
   .search-bar-wrapper .input-icon-right {
-    z-index: 1 !important;
+    z-index: 10 !important;
   }
 }
 
