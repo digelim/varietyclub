@@ -125,6 +125,8 @@ function custom_search() {
         $j++;
         $i++;
     }
+  } else {
+    $output = '<p style="font-family: \'Arial\';">No ornaments found.</p>';
   }
 
   echo $output;
