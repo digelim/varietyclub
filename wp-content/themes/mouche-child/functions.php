@@ -105,7 +105,7 @@ function custom_search() {
           '<ellipse cx="108.5" cy="19" fill="#fff" rx="5.5" ry="10"/>' .
           '  <foreignObject width="100%" height="100%" y="6vw" x="1.25vw">'.
           '   <div class="foreign-object-wrapper-2">' .
-          '     <p style="font-family: Arial Rounded; font-size: 10px; text-align: center; color: white;" xmlns="http://www.w3.org/1999/xhtml">'. get_field("message") . ''</p>'.
+          '     <p style="font-family: Arial Rounded; font-size: 10px; text-align: center; color: white;" xmlns="http://www.w3.org/1999/xhtml">'. get_field("message") . '</p>'.
           '   </div>' .
           '  </foreignObject>'.
           '</svg>'.
