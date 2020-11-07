@@ -136,5 +136,29 @@ input[type="text"] {
   font-family: 'Arial' !important;
   line-height: 20px !important;
 }
+
+#share-icons {
+    display: flex;
+    position: absolute;
+    top: 52px;
+    justify-content: center;
+    width: 100%;
+
+    img {
+        width: 16px;
+        position: relative;
+    }
+}
+
+@media (min-width: 481px) {
+  #share-icons {
+    top: 82px;
+    margin-left: -7%;
+
+    img {
+      width: 10px;
+    }
+  }
+}
 // Add your styles above this line
 @import './responsive.less';
