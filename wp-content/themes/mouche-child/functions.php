@@ -107,7 +107,7 @@ function custom_search() {
           '<ellipse cx="108.5" cy="19" fill="#fff" rx="5.5" ry="10"/>' .
           '  <foreignObject width="100%" height="100%" y="5.5vw" x="1.25vw">'.
           '   <div class="foreign-object-wrapper-2">' .
-          '     <p style="font-family: Arial Rounded; font-size: 10px; text-align: center; color: white;" xmlns="http://www.w3.org/1999/xhtml">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m</p>'.
+          '     <p style="font-family: Arial Rounded; font-size: 10px; text-align: center; color: white;" xmlns="http://www.w3.org/1999/xhtml">' . get_field('message') . '</p>'.
           '   </div>' .
           '<div class="row no-gutters align-items-center" id="share-icons">'.
           '  <a href="https://www.facebook.com/sharer/sharer.php" onclick="javascript:window.open(this.href + \'?u=' . home_url() . '?id=' .  get_the_ID() . '\', \'\', \'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600\');return false;" target="_blank" title="Share on Facebook" class="m-r-10 subtitle">' .
