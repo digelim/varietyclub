@@ -8,7 +8,7 @@ get_header();
 ?>
 
 <section id="header">
-  <img class="block m-t-95 full-width mob-md-m-t-70" src="<?php echo bloginfo('stylesheet_directory'); ?>/images/header.png" alt="Image">
+  <img class="block m-t-95 full-width mob-md-m-t-70" src="<?php echo get_field('header_image'); ?>" alt="Image">
 </section>
 
 <section>
