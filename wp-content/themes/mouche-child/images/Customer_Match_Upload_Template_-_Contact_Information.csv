@@ -1,0 +1,22 @@
+# Instructions:
+# Customer Match data files must follow specific formatting guidelines in order to be accepted. Incorrect formatting can lead to an upload error or a low number of matched records.
+#
+# Un-hashed (Plain Text) Formatting Guidelines:
+# Files must be in the CSV format
+# All identifiers for one user record must be comma-separated. Different user records must be separated by a line break. They cannot be separated with a space or semicolon
+# Headers must be: Email, Phone, First Name, Last Name, Country, Zip (multiple email, phone, and postal columns are allowed)
+# You must provide First Name and Last Name if you want Google Ads to create a Country and Zip match
+# The Phone column header name is required to upload phone numbers. The only formatting requirement is to include country code.
+#
+# Hashed Formatting Guidelines:
+# All of the above
+# Lowercase all characters and remove all extra spaces before after or in between email addresses and names
+# Phone numbers must be formatted as E.164 prior to hashing https://en.wikipedia.org/wiki/E.164
+#
+# Field Specific Guidelines:
+# Please reference this help center article for field specific requirements: https://support.google.com/google-ads/answer/7475964
+#
+Email,First Name,Last Name,Country,Zip,Email,Zip,Phone,Phone
+test@gmail.com,john,smith,us,94016,,,1-800-888-8888,
+test2@gmail.com,joanna,smith,cn,101300,test4@gmail.com,101500,,
+test4@gmail.com,zoë,pérez,sg,WC2H 8LG,test6@gmail.com,,18008888899,1(800)888-8888
