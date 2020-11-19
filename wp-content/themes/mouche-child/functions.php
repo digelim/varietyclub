@@ -45,6 +45,7 @@ function custom_search() {
   $i = 1;
   $j = 1;
   $names = ['Zahid', 'Alice', 'Greta', 'Jenna', 'Kolby', 'Callum', 'Ryan', 'Stella'];
+  $ages = [8, 3, 11, 4, 9, 4, 9, 7];
 
   if ( $the_query->have_posts() ) {
     while ( $the_query->have_posts() ) {
@@ -112,6 +113,7 @@ function custom_search() {
             '  <foreignObject width="100%" height="100%">'.
             '   <div class="foreign-object-wrapper">'.
             '     <p style="font-family: Arial Rounded; font-size: 23px; line-height:35px; text-align: center; color: white;" xmlns="http://www.w3.org/1999/xhtml">' . $names[ $index ] . '</p>'.
+            '     <p style="font-family: Arial Rounded; font-size: 23px; line-height:35px; text-align: center; color: white;" xmlns="http://www.w3.org/1999/xhtml">'. $ages[$index] . ' years old</p>'.
             '   </div>' .
             '  </foreignObject>'.
             '</svg>'.
